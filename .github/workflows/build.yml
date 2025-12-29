@@ -38,11 +38,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: ./aosp/treble_aosp
-
-   Run webfactory/ssh-agent@v0.8.0
-  with:
-    log-public-key: true
-
       - name: Build ROM
         run: ./treble_aosp/build.sh
         env:
