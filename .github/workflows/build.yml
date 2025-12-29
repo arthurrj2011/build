@@ -39,10 +39,9 @@ jobs:
         with:
           path: ./aosp/treble_aosp
 
-      - name: Start SSH Agent
-        uses: webfactory/ssh-agent@v0.9.1
-        with:
-          ssh-private-key: ${{ secrets.VENDOR_PONCES_PRIV_KEY }}
+   Run webfactory/ssh-agent@v0.8.0
+  with:
+    log-public-key: true
 
       - name: Build ROM
         run: ./treble_aosp/build.sh
